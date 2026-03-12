@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* Industrial B2B design system */
+:root {
+  --color-primary: #0B3C5D;
+  --color-secondary: #1D70B8;
+  --color-accent: #00AEEF;
+  --color-background: #F5F7FA;
+  --color-white: #FFFFFF;
+}
+
+body {
+  font-feature-settings: "rlig" 1, "calt" 1;
+  background-color: var(--color-background);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal overflow on small screens */
+body {
+  overflow-x: hidden;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+}
+
+/* CTA button hover animation */
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 174, 239, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(0, 174, 239, 0); }
+}
+
+.btn-cta-hover:hover {
+  animation: cta-pulse 1.5s ease-in-out infinite;
+}
+
+/* Card lift on hover */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(11, 60, 93, 0.12);
+}
